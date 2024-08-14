@@ -14,6 +14,10 @@ const [userInput, setUserInput] = useState({
 });
 
 const addDataToFirebaseCollection = async () => {
+
+    /* here "users" is the collection name & 
+        "FIRESTORE" is the Firebase/firestore's Instance which is imported at top.
+    */
     await addDoc(collection(FIRESTORE, "users"), {
         ...userInput, // your data in react's state
 
